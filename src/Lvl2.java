@@ -16,6 +16,10 @@ public class Lvl2 extends javax.swing.JFrame {
      */
     public Lvl2() {
         initComponents();
+        btn1.setSelected(true);
+        btn4.setSelected(true);
+        btn7.setSelected(true);
+        btn12.setSelected(true);
     }
 
     private void collecteRep(){
@@ -287,8 +291,9 @@ public class Lvl2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        dispose();
          Gover g = new Gover();
-        Congrat d = new Congrat();
+        Congrat1 d2 = new Congrat1();
         collecteRep();
         txtRep.append(rep1 +"\n");
         txtRep.append(rep2+ "\n");
@@ -298,9 +303,11 @@ public class Lvl2 extends javax.swing.JFrame {
         txtRep.append("Your Score :" + String.valueOf(count));
         if(count>=60){
             txtRep.append("Congrats ...");
-            d.setVisible(true);
+            d2.setLocationRelativeTo(null);
+            d2.setVisible(true);
             
         }else{
+            g.setLocationRelativeTo(null);
             g.setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed

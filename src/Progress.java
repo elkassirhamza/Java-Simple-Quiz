@@ -110,6 +110,7 @@ public class Progress extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                p.setLocationRelativeTo(null);
                 p.setVisible(true);
             }
         });
